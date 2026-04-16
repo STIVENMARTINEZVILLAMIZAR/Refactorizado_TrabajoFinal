@@ -1,0 +1,6 @@
+# Sin dependencias externas: se usan `unittest` y la librería estándar.
+#
+# Ejecución:
+#   - Arranque consola: `python main.py`
+#   - Tests: `python -m unittest discover -s tests`
+

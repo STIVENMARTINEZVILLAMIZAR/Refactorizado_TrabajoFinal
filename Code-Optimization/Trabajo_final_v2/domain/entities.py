@@ -39,6 +39,20 @@ class Usuario:
             "tipo": self.tipo.value,
         }
 
+    def to_dict_for_prestamo(self) -> Dict[str, Any]:
+        """
+        Contrato compatible con el baseline:
+        `prestamos.json` embebe usuario sin la clave `tipo`.
+        """
+
+        return {
+            "id": self.id,
+            "nombre": self.nombre,
+            "apellido": self.apellido,
+            "telefono": self.telefono,
+            "direccion": self.direccion,
+        }
+
 
 @dataclass(frozen=True)
 class Categoria:

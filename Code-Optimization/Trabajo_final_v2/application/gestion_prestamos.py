@@ -38,7 +38,8 @@ class GestionPrestamos:
         fecha_final = fecha_inicio + timedelta(days=int(dto.dias))
 
         payload = {
-            "usuario": usuario.to_dict(),
+            # Baseline: `prestamos.json` embebe `usuario` sin la clave `tipo`.
+            "usuario": usuario.to_dict_for_prestamo(),
             "herramienta": herramienta.to_dict(),
             "cantidad": int(dto.cantidad),
             "fecha_inicio": str(fecha_inicio),
