@@ -82,6 +82,7 @@ def build_app(config: AppConfig):
         herramientas_controller=herramientas_controller,
         prestamos_controller=prestamos_controller,
         reportes_controller=reportes_controller,
+        logger=logger,
     )
 
 
